@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1,user-scalable=no">
+<title>需求详情-伦途科技</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/m_index.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+</head>
+
+<body>
+<!--头部-->
+<header class="header">	
+	<a href="javascript:history.go(-1)" style="width:16%;" class="logo column"><img src="images/fhjt.png" alt="返回" /></a>
+	<p style="width:72%;color:#fff;height:30px; line-height:40px; float:left;">需求详情</p>
+</header>
+<!--详情标题-->
+<div class="m_detail">
+	<div class="de_title xq-detail">
+		<p>7月23号需要找个计时收费的教练培训科目二，价钱可商谈</p>
+		<p class="sub">2017-06-23 <span>发布人：小张</span></p>
+	</div>
+</div>
+<!--详情内容-->
+<div class="xq_nr">
+	<p>7月23号需要找个计时收费的教练培训科目二，价钱可商谈；性别要求男，年龄25-36岁之间；时间早上8点到下午5点</p>
+	<p>联系人：张晓辉</p>
+	<p>联系电话：18256456456</p>
+	<button type="button" class="btn btn-primary" id="btn-jd">我要接单</button>
+</div>
+
+<script>
+$(function(){
+	$("#btn-jd").click(function(){
+		alert("接单成功");
+		$("#btn-jd").addClass("disabled");
+		$("#btn-jd").html("已被接单");
+	});
+});
+</script>
+</body>
+</html>

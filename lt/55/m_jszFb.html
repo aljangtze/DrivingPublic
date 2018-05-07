@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>驾驶证服务发布-云南伦途科技有限公司</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/m_index.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,900|Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="dist/css/dropify.css">
+<script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+<!--头部-->
+<header class="header">
+	<a href="javascript:history.go(-1)" class="logo column"><img src="images/fhjt.png" alt="返回" /></a>
+	<p style="width:84%;text-align:center;color:#fff;height:40px; line-height:40px;">驾驶证服务发布</p>
+</header>
+<!--汽车服务内容-->
+<div class="vip_class">
+	<div class="jm1">
+		<form action="">
+			<div class="fenshu">
+				<label>商家名称</label>
+				<input type="text" value="" placeholder="请填写商家名称，必填" id="sjmc"/>
+			</div>
+			<div class="fenshu">
+				<label>服务项目</label>
+				<input type="text" value="" placeholder="请填写服务项目，必填" id="fwxm"/>
+			</div>
+			<div class="fenshu">
+				<label>服务价格</label>
+				<input type="text" value="" placeholder="请填写价格，必填" id="jg"/>
+			</div>
+			<div class="fenshu">
+				<label>商家地址</label>
+				<input type="text" value="" placeholder="请填写商家地址，必填" id="addr"/>
+			</div>
+			<div class="fenshu">
+				<label>项目介绍</label>
+				<textarea class="form-control" rows="8" placeholder="请填写项目介绍" style="border:1px solid #ededed;outline:none;box-shadow:none;" /></textarea>
+			</div>
+			<!--上传附件-->
+			<div class="image_up">
+				<label for="input-file-now">商家图片</label>
+				<input type="file" name="sjtp" id="sjtp" class="dropify"  data-max-file-size="5M" data-allowed-file-extensions="jpg png gif jpeg"/>
+			</div>
+			<button type="submit" class="btn btn-primary" id="btn_ptbx">确定发布</button>
+		</form>
+	</div>
+</div>
+<script src="dist/js/dropify.js"></script>
+<script>
+$("#btn_ptbx").click(function(){
+	var sjmc=$("#sjmc").val();
+	var fwxm=$("#fwxm").val();
+	var jg=$("#jg").val();
+	var addr=$("#addr").val();
+	var sjtp=$("#sjtp").val();
+	if(fwxm=="" || jg=="" || sjmc=="" || addr=="" || sjtp==""){
+		alert("必填内容不能为空");
+		return false;
+	}
+	else{
+		alert("发布成功");
+	}
+});
+$(document).ready(function(){
+	// Basic
+	$('.dropify').dropify();
+
+	// Translated
+	$('.dropify-fr').dropify({
+		messages: {
+			default: 'Glissez-déposez un fichier ici ou cliquez',
+			replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+			remove:  'Supprimer',
+			error:   'Désolé, le fichier trop volumineux'
+		}
+	});
+
+	// Used events
+	var drEvent = $('#input-file-events').dropify();
+
+	drEvent.on('dropify.beforeClear', function(event, element){
+		return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
+	});
+
+	drEvent.on('dropify.afterClear', function(event, element){
+		alert('File deleted');
+	});
+
+	drEvent.on('dropify.errors', function(event, element){
+		console.log('Has Errors');
+	});
+
+	var drDestroy = $('#input-file-to-destroy').dropify();
+	drDestroy = drDestroy.data('dropify')
+	$('#toggleDropify').on('click', function(e){
+		e.preventDefault();
+		if (drDestroy.isDropified()) {
+			drDestroy.destroy();
+		} else {
+			drDestroy.init();
+		}
+	})
+});
+</script>
+</body>
+</html>

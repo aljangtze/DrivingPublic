@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>会员中心-云南伦途科技有限公司</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/m_index.css">
+<link rel="stylesheet" type="text/css" href="css/public.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+</head>
+
+<body>
+<!--头部-->
+<header class="header">	
+	<p style="width:100%;text-align:center;color:#fff;height:40px; line-height:40px;">会员中心</p>
+</header>
+ <!--幻灯片广告-->
+ <div class="slide_container">
+      <ul class="rslides" id="slider">
+	  	<li>
+          <img src="images/hdp_1.jpg" alt="幻灯片2">
+        </li>
+        <li>
+          <img src="images/hdp_2.jpg" alt="幻灯片3">
+        </li>
+        <li>
+          <img src="images/hdp_3.jpg" alt="幻灯片2">
+        </li>
+        <li>
+          <img src="images/hdp_4.jpg" alt="幻灯片3">
+        </li>
+      </ul>
+  </div>
+  <p class="m_fg"></p> 
+<!--用户帐号-->
+<div class="m_user">
+	<div class="tx column">
+    	<a href="m_viptx.html"><img src="images/lttx.jpg" class="img-rounded"></a>
+    </div>
+    <div class="zh column">
+    	<p>账号：18206722101</p>
+    	<p><a href="m_xgmm.html">修改密码</a></p>
+    </div>
+</div>
+<p class="m_fg" style="margin-bottom:3px;"></p>
+<!--用户信息-->
+<div class="basic_info">
+	<div class="m_orders">
+		<a href="m_qyInfo.html"><img src="images/jbxx.png" alt="基本信息" /><p>基本信息 <span>></span></p></a>
+	</div>
+    <div class="m_orders">
+		<a href="m_xyOrder.html"><img src="images/ddgl.png" alt="我的订单" /><p>我的订单 <span>></span></p></a>
+	</div>
+    <div class="m_orders">
+		<a href="m_xqzc.html"><img src="images/fbxq.png" alt="查找需求" /><p>学员需求 <span>></span></p></a>
+	</div>
+	<div class="m_orders">
+		<a href="m_bxfb.html"><img src="images/bxfb.png" alt="班型发布" /><p>班型发布 <span>></span></p></a>
+	</div>
+	<p class="m_fg" style="margin-bottom:3px;"></p>
+	<div class="m_orders">
+		<a href="m_luntan.html"><img src="images/zxlt.png" alt="在线论坛" /><p>在线论坛 <span>></span></p></a>
+	</div>
+	<div class="m_orders">
+		<a href="m_wytg.html"><img src="images/wytg.png" alt="我要投稿" /><p>我要投稿 <span>></span></p></a>
+	</div>
+	<div class="m_orders">
+		<a href="m_zxpx.html"><img src="images/zxpx.png" alt="在线培训" /><p>在线培训 <span>></span></p></a>
+	</div>
+	<div class="m_orders">
+		<a href="m_zsfx.html"><img src="images/wypx.png" alt="知识分享" /><p>知识分享 <span>></span></p></a>
+	</div>
+</div>
+<p class="m_bsfg" style="margin-bottom:0"></p>
+<!--加载时执行模态框，一天一次-->
+<div id="cover-bg"></div>
+<div class="alert_windows">
+	<span>X</span>
+	<p class="gg_title">弹窗广告</p>
+	<div class="tc_content">
+		<p>恒源驾校招生啦！现在报名优惠多多，详情请点击<a href="m_drive_xq.html">此链接查看</a></p>
+		<a href="m_drive_xq.html"><img src="images/hdp_3.jpg"></a>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="js/slide.js"></script>
+<script>
+$(function(){
+	if($.cookie("jlClose") != 'yes'){
+		var winWid = $(window).width()/2 - $('.alert_windows').width()/2;
+		var winHig = $(window).height()/4 - $('.alert_windows').height()/4;
+		$(".alert_windows").css({"left":winWid,"top":-winHig*2});	//自上而下
+		$(".alert_windows").show();
+		$("#cover-bg").show();
+		$(".alert_windows").animate({"left":winWid,"top":winHig},600);
+		$(".alert_windows span").click(function(){
+			$(this).parent().fadeOut(300);
+			$("#cover-bg").css("display","none");
+			//$.cookie("isClose",'yes',{ expires:1/8640});	//测试十秒
+			$.cookie("isClose",'yes',{ expires:1});	
+		});
+	}
+});
+</script>
+</body>
+</html>

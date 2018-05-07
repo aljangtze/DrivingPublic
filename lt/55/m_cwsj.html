@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>成为商家-云南伦途科技有限公司</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/m_index.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+
+<body style="width:100%;height:100%;background-color:#F5F5F5;">
+<!--头部-->
+<header class="header">	
+	<!--<a href="javascript:history.go(-1)" class="logo column"><img src="images/fhjt.png" alt="返回" /></a>-->
+	<p style="width:100%;text-align:center;color:#fff;height:40px; line-height:40px;">成为商家</p>
+</header>
+<!--选择认证-->
+<div class="xzrz">
+	<p class="xz">以哪种方式进行认证？</p>
+	<ul class="xzrz_fs">
+		<li> <div class="right t_size" id="gr"></div><span>个人</span></li>
+		<li> <div class="right t_size" id="qy"></div><span>企业</span></li>
+		<!--<li> <div class="right t_size" id="js"></div><span>计时</span></li>-->
+	</ul>
+	<p class="tj">有营业执照的话，推荐以企业身份入驻</p>
+	<p class="fwxy">
+	   <label class="column">
+			<input type="checkbox" checked="checked" value="1" id="ckx" name="checkName" >
+	   </label>
+	   <span class="column">
+	   		同意和接受<a data-toggle="modal" data-target="#myModal">《新司机服务收费规则》</a>
+	   </span>
+	</p>
+	<div class="btn_zc"><button type="button" class="btn btn-primary" id="btn_register">下一步</button></div>
+</div>
+<!--收费规则-->
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">新司机服务收费规则</h4>
+      </div>
+      <div class="modal-body">
+        <p>新司机服务收费规则新司机服务收费规则新司机服务收费规则新司机服务收费规则新司机服务收费规则新司机服务收费规则新司机服务收费规则新司机服务收费规则新司机服务收费规则新司机服务收费规则新司机服务收费规则新司机服务收费规则新司机服务收费规则新司机服务收费规则新司机服务收费规则新司机服务收费规则</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script>
+<!--check触发事件，选中移除按钮禁用状态-->
+$(function(){
+	$('input').on('change', function(){
+		if($('input:checkbox:checked').val()) {
+			$("#btn_register").removeAttr("disabled");
+		}
+		else{
+			$("#btn_register").attr("disabled",true);
+			}
+	});
+	$("#btn_register").click(function(){
+		if($("#gr").attr("class").indexOf("right-h")>0){
+			location.href="m_jlWyrz.html";
+		}
+		else if($("#qy").attr("class").indexOf("right-h")>0){
+			location.href="m_jljxrz.html";
+		}
+		else if($("#js").attr("class").indexOf("right-h")>0){
+			location.href="m_jssf.html";
+		}
+		else{
+			alert("请选择一种方式进行认证");
+		}
+	});
+});
+$(function(){
+	$("#gr").click(function(){
+		$("#gr").addClass("right-h");
+		$("#qy").removeClass("right-h");
+		$("#js").removeClass("right-h");
+	});
+	$("#qy").click(function(){
+		$("#gr").removeClass("right-h");
+		$("#qy").addClass("right-h");
+		$("#js").removeClass("right-h");
+	});
+	$("#js").click(function(){
+		$("#gr").removeClass("right-h");
+		$("#qy").removeClass("right-h");
+		$("#js").addClass("right-h");
+	});
+});
+</script>
+</body>
+</html>

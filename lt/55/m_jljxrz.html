@@ -1,0 +1,236 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>企业注册-云南伦途科技有限公司</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/m_index.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,900|Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="dist/css/dropify.css">
+<script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+<!--头部-->
+<header class="header">	
+	<p style="width:100%;text-align:center;color:#fff;height:40px; line-height:40px;">企业注册</p>
+</header>
+<!--加盟表单信息-->
+<div class="jm1">
+	<form action="m_jlCenter.html">
+		<div class="fenshu">
+			<label>真实姓名</label>
+			<input type="text" value="" placeholder="请填写真实姓名" id="userName" name="jl-name"/>
+		</div>
+		<div class="fenshu">
+			<label>真实年龄</label>
+			<input type="text" value="" placeholder="请填写您的真实年龄" id="age" name="jl-age"/>
+		</div>
+		<div class="fenshu">
+			<label>身份证号码</label>
+			<input type="text" value="" placeholder="请填写身份证号码" id="cartID" name="jl-id" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();"/>
+		</div>
+		<div class="fenshu">
+			<label>性别</label>
+			<label class="radio-inline">
+			   <input type="radio" name="selected" id="inlineRadio1" value="option1" checked="checked"> 男
+			</label>
+			<label class="radio-inline">
+			   <input type="radio" name="selected" id="inlineRadio2" value="option2"> 女
+			</label>
+		</div>
+		<div class="fenshu">
+			<label>所在行业</label>
+			<select id="select_id">
+				<option value="0">请选择所在行业</option>
+				<option value="1">驾培服务</option>
+				<option value="2">汽车服务</option>
+				<option value="3">驾驶证服务</option>
+			</select>
+		</div>
+		
+	<!--上传图片，驾校-->
+	<div id="jp" style="display:none;">
+		<div class="fenshu">
+			<label>成立日期</label>
+			<input type="text" value="" placeholder="请填写成立日期" id="jl-jl1" name="jl-jl1"/>
+		</div>
+		
+		<div class="fenshu">
+			<label>驾校名称</label>
+			<input type="text" value="" placeholder="请填写驾校名称" id="szjx1" name="jl-szjx1"/>
+		</div>
+		<div class="fenshu">
+			<label>驾校位置</label>
+			<input type="text" value="" placeholder="请填写驾校位置" id="jxwz2" name="jl-jxwz2"/>
+		</div>
+		<div class="image_up">
+			<label for="input-file-now">营业执照</label>
+            <input type="file" name="jl-pxxkz" id="jxpxz1" class="dropify"  data-max-file-size="5M" data-allowed-file-extensions="jpg png gif jpeg"/>
+		</div>
+		<div class="image_up">
+			<label for="input-file-now">法人身份证正面</label>
+            <input type="file" name="jl-sfz" id="jlsfz1" class="dropify"  data-max-file-size="5M" data-allowed-file-extensions="jpg png gif jpeg"/>
+		</div>
+		<div class="image_up">
+			<label for="input-file-now">法人身份证反面</label>
+            <input type="file" name="jl-sfzfm" id="jlsffm1" class="dropify"  data-max-file-size="5M" data-allowed-file-extensions="jpg png gif jpeg"/>
+		</div>
+		<div class="image_up">
+			<label for="input-file-now">教练车图片</label>
+            <input type="file" name="jl-sfzfm" id="jlsffm1" class="dropify"  data-max-file-size="5M" data-allowed-file-extensions="jpg png gif jpeg"/>
+		</div>
+		<div class="image_up">
+			<label for="input-file-now">训练场地1</label>
+            <input type="file" name="jl-xlcd1" id="xlcd1" class="dropify"  data-max-file-size="5M" data-allowed-file-extensions="jpg png gif jpeg"/>
+		</div>
+		<div class="image_up">
+			<label for="input-file-now">训练场地2</label>
+            <input type="file" name="jl-xlcd2" class="dropify"  data-max-file-size="5M" data-allowed-file-extensions="jpg png gif jpeg"/>
+		</div>
+	</div>
+	<!--上传图片，汽车服务-->
+	<div id="cw" style="display:none;">
+		<div class="fenshu">
+			<label>详细地址</label>
+			<input type="text" value="" placeholder="请填写详细地址" id="jl-xxdz" name="jl-xxdz"/>
+		</div>
+		<div class="fenshu">
+			<label>服务地区</label>
+			<input type="text" value="" placeholder="请填写服务地区" id="jl-fwdq" name="jl-fwdq"/>
+		</div>
+		<div class="image_up">
+			<label for="input-file-now">店铺照片</label>
+            <input type="file" name="jl-dp" class="dropify"  data-max-file-size="5M" data-allowed-file-extensions="jpg png gif jpeg"/>
+		</div>
+		<div class="image_up">
+			<label for="input-file-now">身份证正面</label>
+            <input type="file" name="jl-cwsfz2"  class="dropify"  data-max-file-size="5M" data-allowed-file-extensions="jpg png gif jpeg"/>
+		</div>
+		<div class="image_up">
+			<label for="input-file-now">身份证反面</label>
+            <input type="file" name="jl-cwsfm2" class="dropify"  data-max-file-size="5M" data-allowed-file-extensions="jpg png gif jpeg"/>
+		</div>
+	</div>
+	<!--上传图片，驾驶证服务-->
+	<div id="jszfw" style="display:none;">
+		<div class="fenshu">
+			<label>详细地址</label>
+			<input type="text" value="" placeholder="请填写详细地址" id="jl-xxdz2" name="jl-xxdz2"/>
+		</div>
+		<div class="fenshu">
+			<label>服务地区</label>
+			<input type="text" value="" placeholder="请填写服务地区" id="jl-fwdq2" name="jl-fwdq2"/>
+		</div>
+		<div class="image_up">
+			<label for="input-file-now">店铺照片</label>
+            <input type="file" name="jl-dpzp" id="jxpxz" class="dropify"  data-max-file-size="5M" data-allowed-file-extensions="jpg png gif jpeg"/>
+		</div>
+		<div class="image_up">
+			<label for="input-file-now">身份证正面</label>
+            <input type="file" name="jl-fwzm" class="dropify"  data-max-file-size="5M" data-allowed-file-extensions="jpg png gif jpeg"/>
+		</div>
+		<div class="image_up">
+			<label for="input-file-now">身份证反面</label>
+            <input type="file" name="jl-fwfm"  class="dropify"  data-max-file-size="5M" data-allowed-file-extensions="jpg png gif jpeg"/>
+		</div>
+	</div>
+		<p class="clearfix"></p>
+		<button type="submit" class="btn btn-primary" id="btn_wyrz">企业注册</button>
+	</form>
+</div>
+<script src="dist/js/dropify.js"></script>
+<script>
+$(function(){
+	$("#select_id").change(function(){
+		var select_id=$("#select_id").val();
+		if(select_id==1){
+			$("#jp").show();
+			$("#cw").hide();
+			$("#jszfw").hide();
+		}
+		else if(select_id==2){
+			$("#jp").hide();
+			$("#cw").show();
+			$("#jszfw").hide();
+		}
+		else if(select_id==3){
+			$("#jp").hide();
+			$("#cw").hide();
+			$("#jszfw").show();
+		}
+		else{
+			$("#jx").hide();
+			$("#cw").hide();
+			$("#jl").hide();
+			$("#jszfw").hide();
+		}
+	});
+	$("#btn_wyrz").click(function(){
+		var select_id=$("#select_id").val();
+		var userName=$("#userName").val();
+		var szjx=$("#szjx").val();
+		if(userName==""){
+			alert("请填写真实姓名");
+			$("#userName").focus();
+			return false;
+		}
+		else if(szjx==""){
+			alert("请填写驾校名称");
+			$("#szjx").focus();
+			return false;
+		}
+		else if(select_id==0){
+			alert("请选择所在行业");
+			return false;
+		}
+		else{
+			alert("入驻资料提交成功，等待后台审核");
+		}
+	});
+});
+$(document).ready(function(){
+	// Basic
+	$('.dropify').dropify();
+
+	// Translated
+	$('.dropify-fr').dropify({
+		messages: {
+			default: 'Glissez-déposez un fichier ici ou cliquez',
+			replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+			remove:  'Supprimer',
+			error:   'Désolé, le fichier trop volumineux'
+		}
+	});
+
+	// Used events
+	var drEvent = $('#input-file-events').dropify();
+
+	drEvent.on('dropify.beforeClear', function(event, element){
+		return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
+	});
+
+	drEvent.on('dropify.afterClear', function(event, element){
+		alert('File deleted');
+	});
+
+	drEvent.on('dropify.errors', function(event, element){
+		console.log('Has Errors');
+	});
+
+	var drDestroy = $('#input-file-to-destroy').dropify();
+	drDestroy = drDestroy.data('dropify')
+	$('#toggleDropify').on('click', function(e){
+		e.preventDefault();
+		if (drDestroy.isDropified()) {
+			drDestroy.destroy();
+		} else {
+			drDestroy.init();
+		}
+	})
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>创业加盟-云南伦途科技有限公司</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/m_index.css">
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,900|Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" type="text/css" href="dist/css/dropify.css">
+</head>
+
+<body>
+<!--头部-->
+<header class="header">	
+	<p style="width:100%;text-align:center;color:#fff;height:40px; line-height:40px;">创业加盟</p>
+</header>
+<!--加盟表单信息-->
+<div class="jm1">
+	<form>
+		<div class="fenshu">
+			<label>真实姓名</label>
+			<input type="text" value="" placeholder="请填写真实姓名" id="userName"/>
+		</div>
+		<div class="fenshu">
+			<label>年龄</label>
+			<input type="text" value="" placeholder="请填写您的年龄" id="age"/>
+		</div>
+		<div class="fenshu">
+			<label>性别</label>
+			<label class="radio-inline">
+			   <input type="radio" name="selected" id="inlineRadio2" value="option2"> 男
+			</label>
+			<label class="radio-inline">
+			   <input type="radio" name="selected" id="inlineRadio3" value="option3"> 女
+			</label>
+		</div>
+		<div class="fenshu">
+			<label>身份证号码</label>
+			<input type="text" value="" placeholder="请填写身份证号码" id="userId"/>
+		</div>
+		<div class="fenshu">
+			<label>详细地址</label>
+			<input type="text" value="" placeholder="请填写详细地址" id="address" style="width:230px;"/>
+		</div>
+		<div class="fenshu">
+			<label>服务地区</label>
+			<input type="text" value="" placeholder="请填写服务地区" id="fudq"/>
+		</div>
+		<!--上传图片-->
+		<div class="image_up">
+			<label for="input-file-now">上传您的身份证照片（正面）</label>
+            <input type="file" id="input-file-now" class="dropify"  data-max-file-size="5M" data-allowed-file-extensions="jpg png gif jpeg"/>
+		</div>
+		<div class="image_up">
+			<label for="input-file-now">上传您的身份证照片（反面）</label>
+            <input type="file" id="input-file-now" class="dropify"  data-max-file-size="5M" data-allowed-file-extensions="jpg png gif jpeg"/>
+		</div>
+		<p class="clearfix"></p>
+		<button type="submit" class="btn btn-primary" id="btn_qdbc">提交审核</button>
+	</form>
+</div>
+<script src="js/jquery.min.js"></script>
+
+<script src="dist/js/dropify.js"></script>
+<script>
+$(document).ready(function(){
+	// Basic
+	$('.dropify').dropify();
+
+	// Translated
+	$('.dropify-fr').dropify({
+		messages: {
+			default: 'Glissez-déposez un fichier ici ou cliquez',
+			replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+			remove:  'Supprimer',
+			error:   'Désolé, le fichier trop volumineux'
+		}
+	});
+
+	// Used events
+	var drEvent = $('#input-file-events').dropify();
+
+	drEvent.on('dropify.beforeClear', function(event, element){
+		return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
+	});
+
+	drEvent.on('dropify.afterClear', function(event, element){
+		alert('File deleted');
+	});
+
+	drEvent.on('dropify.errors', function(event, element){
+		console.log('Has Errors');
+	});
+
+	var drDestroy = $('#input-file-to-destroy').dropify();
+	drDestroy = drDestroy.data('dropify')
+	$('#toggleDropify').on('click', function(e){
+		e.preventDefault();
+		if (drDestroy.isDropified()) {
+			drDestroy.destroy();
+		} else {
+			drDestroy.init();
+		}
+	})
+});
+</script>
+</body>
+</html>
